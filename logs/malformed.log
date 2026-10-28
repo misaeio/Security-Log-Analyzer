@@ -1,0 +1,4 @@
+CORRUPTED_LINE_WITHOUT_TIMESTAMP_OR_IP
+Oct 27 10:00:01 invalid_format_line_missing_process_name
+192.168.1.1 - - [INVALID_DATE_FORMAT] "BAD REQUEST"
+!!!###$$$BINARY_OR_GARBAGE_INPUT_STRING$$$###!!!

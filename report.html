@@ -1,0 +1,61 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>SOC Security Log Analysis Report</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a24; color: #e0e0e0; padding: 20px; }
+            h1, h2 { color: #4da6ff; }
+            .card-container { display: flex; gap: 20px; margin-bottom: 20px; }
+            .card { background: #252538; padding: 15px 25px; border-radius: 8px; flex: 1; border-left: 4px solid #4da6ff; }
+            table { width: 100%; border-collapse: collapse; margin-top: 10px; background: #252538; }
+            th, td { padding: 12px; text-align: left; border-bottom: 1px solid #33334d; }
+            th { background: #2d2d44; color: #4da6ff; }
+            .badge { padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; }
+            .HIGH { background: #ff5555; color: white; }
+            .CRITICAL { background: #ff0000; color: white; font-weight: 900; }
+            .MEDIUM { background: #ffb86c; color: black; }
+        </style>
+    </head>
+    <body>
+        <h1> Security Incident Log Report</h1>
+        <p>Generated automated SIEM analysis report.</p>
+
+        <h2>Summary Metrics</h2>
+        <div class="card-container">
+            <div class="card"><h3>Total Analyzed</h3><p>10</p></div>
+            <div class="card"><h3>Failed Logins</h3><p>5</p></div>
+            <div class="card"><h3>Malformed Logs</h3><p>2</p></div>
+            <div class="card"><h3>Threat Alerts</h3><p>2</p></div>
+        </div>
+
+        <h2>Detected Security Incidents</h2>
+        <table>
+            <tr>
+                <th>Severity</th>
+                <th>Incident Type</th>
+                <th>MITRE ATT&CK</th>
+                <th>Source IP</th>
+                <th>Details</th>
+            </tr>
+            
+            <tr>
+                <td><span class="badge CRITICAL">CRITICAL</span></td>
+                <td>Path Traversal / Sensitive Access</td>
+                <td><code>T1083</code></td>
+                <td>10.0.0.85</td>
+                <td>Attempted access to /download?file=/etc/passwd</td>
+            </tr>
+            
+            <tr>
+                <td><span class="badge HIGH">HIGH</span></td>
+                <td>SSH Brute Force Attack</td>
+                <td><code>T1110</code></td>
+                <td>192.168.1.105</td>
+                <td>5 failed login attempts detected from IP.</td>
+            </tr>
+            
+        </table>
+    </body>
+    </html>
+    

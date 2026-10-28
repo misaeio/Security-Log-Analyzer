@@ -1,0 +1,21 @@
+{
+  "failed_login_threshold": {
+    "max_attempts": 5,
+    "time_window_seconds": 300,
+    "mitre_id": "T1110",
+    "technique": "Brute Force",
+    "severity": "HIGH"
+  },
+  "sql_injection_patterns": [
+    "UNION SELECT",
+    "' OR '1'='1",
+    "INFORMATION_SCHEMA",
+    "--"
+  ],
+  "sensitive_file_access": [
+    "/etc/shadow",
+    "/etc/passwd",
+    "web.config",
+    "id_rsa"
+  ]
+}
